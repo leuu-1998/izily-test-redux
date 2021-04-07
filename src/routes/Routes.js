@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import App from "../containers/app/App";
 //Route permite traer elementos
-import Layout from "../containers/Layout/Layout";
+import Layout from "../containers/layout/Layout";
 
 const Routes = () => (
   <BrowserRouter>
