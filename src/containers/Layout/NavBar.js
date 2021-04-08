@@ -1,8 +1,10 @@
 import React from "react";
 import AppBar from "@material-ui/core/AppBar";
-
+//react router
+import { Link } from "react-router-dom";
+//material ui
 import { makeStyles, Grid, Button } from "@material-ui/core";
-
+//assets
 import logo from "../../assets/images/logoprincipal.webp";
 
 const useStyles = makeStyles((theme) => ({
@@ -89,6 +91,7 @@ const useStyles = makeStyles((theme) => ({
 
 const NavBar = () => {
   const classes = useStyles();
+
   return (
     <React.Fragment>
       <AppBar className={classes.root}>
@@ -96,6 +99,7 @@ const NavBar = () => {
         <Grid className={classes.gridPadre} container alignItems="center">
           <Grid className={classes.gridHijo} item>
             <Button
+              component={Link}
               to={"/"}
               className={classes.buttonLogo}
               disableRipple={true}
@@ -108,10 +112,20 @@ const NavBar = () => {
           <Grid className={classes.gridHijo} item xs></Grid>
 
           <Grid className={classes.gridHijo} item>
-            <Button className={classes.botones} variant="outlined">
+            <Button
+              className={classes.botones}
+              variant="outlined"
+              component={Link}
+              to={"/login"}
+            >
               Ingresar
             </Button>
-            <Button className={classes.botones} variant="outlined">
+            <Button
+              className={classes.botones}
+              variant="outlined"
+              component={Link}
+              to={"/signup"}
+            >
               Regístrate
             </Button>
           </Grid>

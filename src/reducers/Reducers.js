@@ -1,3 +1,8 @@
 import { combineReducers } from "redux";
+import usuariosReducers from "./usuariosReducers";
 
-export default combineReducers({});
+//aqui combinamos todos los reducers para que se puedan
+//ver en toda la aplicacion, eso hacemos con este js
+export default combineReducers({
+  usuariosReducers,
+});
