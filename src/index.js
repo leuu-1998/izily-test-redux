@@ -8,11 +8,12 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 //import reducers
 import reducers from "./reducers/Reducers";
+//importamos las actions que usaremos
 
 //storage app for all information
 const store = createStore(
   reducers, //all reducers
-  {} //initial state
+  window.STATE_FROM_SERVER //initial state
 );
 
 ReactDOM.render(
