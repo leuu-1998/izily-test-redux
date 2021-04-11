@@ -5,7 +5,7 @@ import React from "react";
 import { connect, useSelector } from "react-redux";
 import { addUser } from "../actions/actionUsers";
 
-const Landing = ({ dispatch }) => {
+const Landing = ({ dispatch, addUser }) => {
   let input;
   //creamos la const de y le asignamos los datos de la app
   const usuarios = useSelector((state) => state);
@@ -17,7 +17,7 @@ const Landing = ({ dispatch }) => {
     if (!input.value.trim()) {
       return;
     }
-    dispatch(addUser(input.value));
+    addUser(input.value);
     input.value = "";
   };
 
@@ -42,4 +42,5 @@ const Landing = ({ dispatch }) => {
 //y como solo queremos el reducer de usuarios eso retornamos
 //...
 //pasamos ese const a connect
-export default connect()(Landing);
+//connect(recuperar_algo-de_store,modificar_algo-de_store)
+export default connect(null, { addUser })(Landing);
