@@ -1,6 +1,6 @@
 //initial state of users
 const INITIAL_STATE = {
-  user: "leonardo",
+  user: "",
 };
 
 //le pasamos el estado aterior y luego la accion que queremos realizar
@@ -17,3 +17,6 @@ const usuariosReducers = (state = INITIAL_STATE, action) => {
 };
 
 export default usuariosReducers;
+
+//para la lectura
+export const lectureUser = (state) => state.usuariosReducers.user;

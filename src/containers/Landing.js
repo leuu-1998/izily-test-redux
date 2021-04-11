@@ -5,7 +5,7 @@ import React from "react";
 import { connect, useSelector } from "react-redux";
 import { addUser } from "../actions/actionUsers";
 
-const Landing = ({ dispatch, addUser }) => {
+const Landing = ({ addUser }) => {
   let input;
   //creamos la const de y le asignamos los datos de la app
   const usuarios = useSelector((state) => state);
@@ -17,6 +17,7 @@ const Landing = ({ dispatch, addUser }) => {
     if (!input.value.trim()) {
       return;
     }
+    //empieza redux
     addUser(input.value);
     input.value = "";
   };
